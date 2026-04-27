@@ -1,0 +1,670 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|c:\\users\\admin\\source\\repos\\smarttravel\\travel.domain\\entities\\reservationpromotion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|solutionrelative:travel.domain\\entities\\reservationpromotion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|c:\\users\\admin\\source\\repos\\smarttravel\\travel.domain\\entities\\reservationpassenger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|solutionrelative:travel.domain\\entities\\reservationpassenger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|c:\\users\\admin\\source\\repos\\smarttravel\\travel.domain\\entities\\reservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|solutionrelative:travel.domain\\entities\\reservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|c:\\users\\admin\\source\\repos\\smarttravel\\travel.domain\\entities\\promotion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|solutionrelative:travel.domain\\entities\\promotion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|c:\\users\\admin\\source\\repos\\smarttravel\\travel.domain\\entities\\phonesupplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|solutionrelative:travel.domain\\entities\\phonesupplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|c:\\users\\admin\\source\\repos\\smarttravel\\travel.domain\\entities\\phonehotel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|solutionrelative:travel.domain\\entities\\phonehotel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|c:\\users\\admin\\source\\repos\\smarttravel\\travel.domain\\entities\\phoneairport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|solutionrelative:travel.domain\\entities\\phoneairport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|c:\\users\\admin\\source\\repos\\smarttravel\\travel.domain\\entities\\paymentstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|solutionrelative:travel.domain\\entities\\paymentstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|c:\\users\\admin\\source\\repos\\smarttravel\\travel.domain\\entities\\paymentmethod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|solutionrelative:travel.domain\\entities\\paymentmethod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|c:\\users\\admin\\source\\repos\\smarttravel\\travel.domain\\entities\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|solutionrelative:travel.domain\\entities\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|c:\\users\\admin\\source\\repos\\smarttravel\\travel.domain\\entities\\passenger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|solutionrelative:travel.domain\\entities\\passenger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|c:\\users\\admin\\source\\repos\\smarttravel\\travel.domain\\entities\\offeredservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|solutionrelative:travel.domain\\entities\\offeredservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|c:\\users\\admin\\source\\repos\\smarttravel\\travel.domain\\entities\\hotel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|solutionrelative:travel.domain\\entities\\hotel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|c:\\users\\admin\\source\\repos\\smarttravel\\travel.domain\\entities\\flightseatreservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|solutionrelative:travel.domain\\entities\\flightseatreservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|c:\\users\\admin\\source\\repos\\smarttravel\\travel.domain\\entities\\flightseat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|solutionrelative:travel.domain\\entities\\flightseat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|c:\\users\\admin\\source\\repos\\smarttravel\\travel.domain\\entities\\flight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|solutionrelative:travel.domain\\entities\\flight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|c:\\users\\admin\\source\\repos\\smarttravel\\travel.domain\\entities\\documenttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|solutionrelative:travel.domain\\entities\\documenttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|c:\\users\\admin\\source\\repos\\smarttravel\\travel.domain\\entities\\discounttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|solutionrelative:travel.domain\\entities\\discounttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|c:\\users\\admin\\source\\repos\\smarttravel\\travel.domain\\entities\\detailreservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|solutionrelative:travel.domain\\entities\\detailreservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|c:\\users\\admin\\source\\repos\\smarttravel\\travel.domain\\entities\\detailpackage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|solutionrelative:travel.domain\\entities\\detailpackage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|c:\\users\\admin\\source\\repos\\smarttravel\\travel.domain\\entities\\destination.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|solutionrelative:travel.domain\\entities\\destination.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|c:\\users\\admin\\source\\repos\\smarttravel\\travel.domain\\entities\\availabilitystatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|solutionrelative:travel.domain\\entities\\availabilitystatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|c:\\users\\admin\\source\\repos\\smarttravel\\travel.domain\\entities\\country.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|solutionrelative:travel.domain\\entities\\country.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|c:\\users\\admin\\source\\repos\\smarttravel\\travel.domain\\entities\\airport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|solutionrelative:travel.domain\\entities\\airport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|c:\\users\\admin\\source\\repos\\smarttravel\\travel.domain\\entities\\seatclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|solutionrelative:travel.domain\\entities\\seatclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|c:\\users\\admin\\source\\repos\\smarttravel\\travel.domain\\entities\\promotiondetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|solutionrelative:travel.domain\\entities\\promotiondetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|c:\\users\\admin\\source\\repos\\smarttravel\\travel.domain\\entities\\reservationstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|solutionrelative:travel.domain\\entities\\reservationstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|c:\\users\\admin\\source\\repos\\smarttravel\\travel.domain\\entities\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|solutionrelative:travel.domain\\entities\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|c:\\users\\admin\\source\\repos\\smarttravel\\travel.domain\\entities\\typeroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|solutionrelative:travel.domain\\entities\\typeroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|c:\\users\\admin\\source\\repos\\smarttravel\\travel.domain\\entities\\vehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|solutionrelative:travel.domain\\entities\\vehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|c:\\users\\admin\\source\\repos\\smarttravel\\travel.domain\\entities\\package.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|solutionrelative:travel.domain\\entities\\package.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|c:\\users\\admin\\source\\repos\\smarttravel\\travel.domain\\entities\\serviceavailability.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|solutionrelative:travel.domain\\entities\\serviceavailability.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|c:\\users\\admin\\source\\repos\\smarttravel\\travel.domain\\entities\\supplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|solutionrelative:travel.domain\\entities\\supplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|c:\\users\\admin\\source\\repos\\smarttravel\\travel.domain\\entities\\typeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|solutionrelative:travel.domain\\entities\\typeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|c:\\users\\admin\\source\\repos\\smarttravel\\travel.domain\\entities\\roluser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|solutionrelative:travel.domain\\entities\\roluser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|c:\\users\\admin\\source\\repos\\smarttravel\\travel.domain\\entities\\systemsuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|solutionrelative:travel.domain\\entities\\systemsuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|c:\\users\\admin\\source\\repos\\smarttravel\\travel.domain\\entities\\rol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|solutionrelative:travel.domain\\entities\\rol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|c:\\users\\admin\\source\\repos\\smarttravel\\travel.domain\\travel.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{74D6DEB5-34F4-455F-B827-7ACFA7631C77}|Travel.Domain\\Travel.Domain.csproj|solutionrelative:travel.domain\\travel.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 10,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Passenger.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\Passenger.cs",
+              "RelativeDocumentMoniker": "Travel.Domain\\Entities\\Passenger.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\Passenger.cs",
+              "RelativeToolTip": "Travel.Domain\\Entities\\Passenger.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAqwEMAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-27T20:44:55.086Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Payment.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\Payment.cs",
+              "RelativeDocumentMoniker": "Travel.Domain\\Entities\\Payment.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\Payment.cs",
+              "RelativeToolTip": "Travel.Domain\\Entities\\Payment.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAowCwAAABVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-27T20:53:04.891Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PaymentMethod.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\PaymentMethod.cs",
+              "RelativeDocumentMoniker": "Travel.Domain\\Entities\\PaymentMethod.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\PaymentMethod.cs",
+              "RelativeToolTip": "Travel.Domain\\Entities\\PaymentMethod.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAiwCgAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-27T20:51:51.804Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PaymentStatus.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\PaymentStatus.cs",
+              "RelativeDocumentMoniker": "Travel.Domain\\Entities\\PaymentStatus.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\PaymentStatus.cs",
+              "RelativeToolTip": "Travel.Domain\\Entities\\PaymentStatus.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACIAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-27T20:50:58.558Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PhoneAirport.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\PhoneAirport.cs",
+              "RelativeDocumentMoniker": "Travel.Domain\\Entities\\PhoneAirport.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\PhoneAirport.cs",
+              "RelativeToolTip": "Travel.Domain\\Entities\\PhoneAirport.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAABoAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-27T20:34:30.305Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PhoneHotel.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\PhoneHotel.cs",
+              "RelativeDocumentMoniker": "Travel.Domain\\Entities\\PhoneHotel.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\PhoneHotel.cs",
+              "RelativeToolTip": "Travel.Domain\\Entities\\PhoneHotel.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAqwBoAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-27T20:31:08.06Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PhoneSupplier.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\PhoneSupplier.cs",
+              "RelativeDocumentMoniker": "Travel.Domain\\Entities\\PhoneSupplier.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\PhoneSupplier.cs",
+              "RelativeToolTip": "Travel.Domain\\Entities\\PhoneSupplier.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAiwB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-27T20:54:06.229Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Promotion.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\Promotion.cs",
+              "RelativeDocumentMoniker": "Travel.Domain\\Entities\\Promotion.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\Promotion.cs",
+              "RelativeToolTip": "Travel.Domain\\Entities\\Promotion.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAAADsAAABYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-27T20:40:27.818Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Reservation.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\Reservation.cs",
+              "RelativeDocumentMoniker": "Travel.Domain\\Entities\\Reservation.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\Reservation.cs",
+              "RelativeToolTip": "Travel.Domain\\Entities\\Reservation.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAowDAAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-27T20:36:58.841Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ReservationPassenger.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\ReservationPassenger.cs",
+              "RelativeDocumentMoniker": "Travel.Domain\\Entities\\ReservationPassenger.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\ReservationPassenger.cs",
+              "RelativeToolTip": "Travel.Domain\\Entities\\ReservationPassenger.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABQAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-27T20:45:56.307Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ReservationPromotion.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\ReservationPromotion.cs",
+              "RelativeDocumentMoniker": "Travel.Domain\\Entities\\ReservationPromotion.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\ReservationPromotion.cs",
+              "RelativeToolTip": "Travel.Domain\\Entities\\ReservationPromotion.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAA1wCEAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-27T20:42:15.726Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "OfferedService.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\OfferedService.cs",
+              "RelativeDocumentMoniker": "Travel.Domain\\Entities\\OfferedService.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\OfferedService.cs",
+              "RelativeToolTip": "Travel.Domain\\Entities\\OfferedService.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAYwDEAAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-27T20:18:59.6Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Hotel.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\Hotel.cs",
+              "RelativeDocumentMoniker": "Travel.Domain\\Entities\\Hotel.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\Hotel.cs",
+              "RelativeToolTip": "Travel.Domain\\Entities\\Hotel.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAQwCkAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-27T20:30:25.568Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "FlightSeatReservation.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\FlightSeatReservation.cs",
+              "RelativeDocumentMoniker": "Travel.Domain\\Entities\\FlightSeatReservation.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\FlightSeatReservation.cs",
+              "RelativeToolTip": "Travel.Domain\\Entities\\FlightSeatReservation.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAqwB0AAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-27T20:49:28.107Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "FlightSeat.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\FlightSeat.cs",
+              "RelativeDocumentMoniker": "Travel.Domain\\Entities\\FlightSeat.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\FlightSeat.cs",
+              "RelativeToolTip": "Travel.Domain\\Entities\\FlightSeat.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAUwCoAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-27T20:48:20.403Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Flight.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\Flight.cs",
+              "RelativeDocumentMoniker": "Travel.Domain\\Entities\\Flight.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\Flight.cs",
+              "RelativeToolTip": "Travel.Domain\\Entities\\Flight.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAAADgAAABTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-27T20:35:09.489Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "DocumentType.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\DocumentType.cs",
+              "RelativeDocumentMoniker": "Travel.Domain\\Entities\\DocumentType.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\DocumentType.cs",
+              "RelativeToolTip": "Travel.Domain\\Entities\\DocumentType.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAqwBcAAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-27T20:43:28.226Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "DiscountType.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\DiscountType.cs",
+              "RelativeDocumentMoniker": "Travel.Domain\\Entities\\DiscountType.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\DiscountType.cs",
+              "RelativeToolTip": "Travel.Domain\\Entities\\DiscountType.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAQwBcAAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-27T20:39:03.11Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "DetailReservation.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\DetailReservation.cs",
+              "RelativeDocumentMoniker": "Travel.Domain\\Entities\\DetailReservation.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\DetailReservation.cs",
+              "RelativeToolTip": "Travel.Domain\\Entities\\DetailReservation.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAAAEEAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-27T20:38:01.953Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "DetailPackage.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\DetailPackage.cs",
+              "RelativeDocumentMoniker": "Travel.Domain\\Entities\\DetailPackage.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\DetailPackage.cs",
+              "RelativeToolTip": "Travel.Domain\\Entities\\DetailPackage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-27T20:23:49.366Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Destination.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\Destination.cs",
+              "RelativeDocumentMoniker": "Travel.Domain\\Entities\\Destination.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\Destination.cs",
+              "RelativeToolTip": "Travel.Domain\\Entities\\Destination.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAiwCYAAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-27T20:26:21.737Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "AvailabilityStatus.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\AvailabilityStatus.cs",
+              "RelativeDocumentMoniker": "Travel.Domain\\Entities\\AvailabilityStatus.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\AvailabilityStatus.cs",
+              "RelativeToolTip": "Travel.Domain\\Entities\\AvailabilityStatus.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAxwAoAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-27T20:20:23.633Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Country.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\Country.cs",
+              "RelativeDocumentMoniker": "Travel.Domain\\Entities\\Country.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\Country.cs",
+              "RelativeToolTip": "Travel.Domain\\Entities\\Country.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAowAoAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-27T20:25:21.111Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Airport.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\Airport.cs",
+              "RelativeDocumentMoniker": "Travel.Domain\\Entities\\Airport.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\Airport.cs",
+              "RelativeToolTip": "Travel.Domain\\Entities\\Airport.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-27T20:33:40.314Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "SeatClass.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\SeatClass.cs",
+              "RelativeDocumentMoniker": "Travel.Domain\\Entities\\SeatClass.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\SeatClass.cs",
+              "RelativeToolTip": "Travel.Domain\\Entities\\SeatClass.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAqwBcAAABaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-27T20:46:45.824Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "PromotionDetail.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\PromotionDetail.cs",
+              "RelativeDocumentMoniker": "Travel.Domain\\Entities\\PromotionDetail.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\PromotionDetail.cs",
+              "RelativeToolTip": "Travel.Domain\\Entities\\PromotionDetail.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAgwCEAAABsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-27T20:41:22.518Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "ReservationStatus.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\ReservationStatus.cs",
+              "RelativeDocumentMoniker": "Travel.Domain\\Entities\\ReservationStatus.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\ReservationStatus.cs",
+              "RelativeToolTip": "Travel.Domain\\Entities\\ReservationStatus.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAqwCEAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-27T20:36:07.459Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Room.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\Room.cs",
+              "RelativeDocumentMoniker": "Travel.Domain\\Entities\\Room.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\Room.cs",
+              "RelativeToolTip": "Travel.Domain\\Entities\\Room.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAA5wCIAAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-27T20:32:45.629Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "TypeRoom.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\TypeRoom.cs",
+              "RelativeDocumentMoniker": "Travel.Domain\\Entities\\TypeRoom.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\TypeRoom.cs",
+              "RelativeToolTip": "Travel.Domain\\Entities\\TypeRoom.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBcAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-27T20:31:54.451Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Vehicle.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\Vehicle.cs",
+              "RelativeDocumentMoniker": "Travel.Domain\\Entities\\Vehicle.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\Vehicle.cs",
+              "RelativeToolTip": "Travel.Domain\\Entities\\Vehicle.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAswDAAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-27T20:27:29.753Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Package.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\Package.cs",
+              "RelativeDocumentMoniker": "Travel.Domain\\Entities\\Package.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\Package.cs",
+              "RelativeToolTip": "Travel.Domain\\Entities\\Package.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAIwDEAAAB4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-27T20:22:33.411Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "ServiceAvailability.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\ServiceAvailability.cs",
+              "RelativeDocumentMoniker": "Travel.Domain\\Entities\\ServiceAvailability.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\ServiceAvailability.cs",
+              "RelativeToolTip": "Travel.Domain\\Entities\\ServiceAvailability.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAA5wC4AAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-27T20:21:29.709Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Supplier.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\Supplier.cs",
+              "RelativeDocumentMoniker": "Travel.Domain\\Entities\\Supplier.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\Supplier.cs",
+              "RelativeToolTip": "Travel.Domain\\Entities\\Supplier.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAqwCIAAABjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-27T20:17:55.238Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "TypeService.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\TypeService.cs",
+              "RelativeDocumentMoniker": "Travel.Domain\\Entities\\TypeService.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\TypeService.cs",
+              "RelativeToolTip": "Travel.Domain\\Entities\\TypeService.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABcAAABmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-27T20:16:54.987Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "RolUser.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\RolUser.cs",
+              "RelativeDocumentMoniker": "Travel.Domain\\Entities\\RolUser.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\RolUser.cs",
+              "RelativeToolTip": "Travel.Domain\\Entities\\RolUser.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAUwBgAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-27T20:15:31.878Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "SystemsUser.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\SystemsUser.cs",
+              "RelativeDocumentMoniker": "Travel.Domain\\Entities\\SystemsUser.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\SystemsUser.cs",
+              "RelativeToolTip": "Travel.Domain\\Entities\\SystemsUser.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAA8wDYAAAByAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-27T20:13:52.633Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "Rol.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\Rol.cs",
+              "RelativeDocumentMoniker": "Travel.Domain\\Entities\\Rol.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Entities\\Rol.cs",
+              "RelativeToolTip": "Travel.Domain\\Entities\\Rol.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAqwAoAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-27T20:10:42.298Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "Travel.Domain",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Travel.Domain.csproj",
+              "RelativeDocumentMoniker": "Travel.Domain\\Travel.Domain.csproj",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\SmartTravel\\Travel.Domain\\Travel.Domain.csproj",
+              "RelativeToolTip": "Travel.Domain\\Travel.Domain.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-04-27T20:09:58.7Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

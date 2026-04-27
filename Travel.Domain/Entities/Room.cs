@@ -1,0 +1,37 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Travel.Domain.Entities
+{
+    [Table("room")]
+    public class Room
+    {
+        [Key]
+        [Column("id")]
+        public long Id { get; set; }
+
+        [Column("id_hotel")]
+        public long IdHotel { get; set; }
+
+        [Column("id_type_room")]
+        public long IdTypeRoom { get; set; }
+
+        [Column("id_service")]
+        public long IdService { get; set; }
+
+        // Navigation
+        public Hotel Hotel { get; set; } = null!;
+        public TypeRoom TypeRoom { get; set; } = null!;
+        public OfferedService OfferedService { get; set; } = null!;
+        public ICollection<DetailReservation> DetailReservations { get; set; } = new List<DetailReservation>();
+
+        // => Para el frontend: etiqueta completa de la habitación
+        [NotMapped]
+        public string RoomLabel => $"{TypeRoom?.TypeDescription} – {Hotel?.HotelName}";
+    }
+}
