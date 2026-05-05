@@ -5,11 +5,12 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Travel.Domain.Core;
 
 namespace Travel.Domain.Entities
 {
     [Table("rol_user")]
-    public class RolUser
+    public class RolUser//: HasId
     {
         [Column("id_rol")]
         public long IdRol { get; set; }

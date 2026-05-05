@@ -5,15 +5,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Travel.Domain.Core;
 
 namespace Travel.Domain.Entities
 {
     [Table("detail_reservation")]
-    public class DetailReservation
+    public class DetailReservation : HasId
     {
-        [Key]
-        [Column("id")]
-        public long Id { get; set; }
 
         [Required]
         [Column("date_check_in")]

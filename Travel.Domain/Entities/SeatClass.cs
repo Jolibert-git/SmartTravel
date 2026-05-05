@@ -5,15 +5,14 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Travel.Domain.Core;
 
 namespace Travel.Domain.Entities
 {
     [Table("seat_class")]
-    public class SeatClass
+    public class SeatClass: HasId
     {
-        [Key]
-        [Column("id")]
-        public long Id { get; set; }
+        
 
         [Required]
         [MaxLength(30)]
@@ -21,6 +20,7 @@ namespace Travel.Domain.Entities
         public string ClassName { get; set; } = string.Empty;
 
         // Navigation
+
         public ICollection<FlightSeat> FlightSeats { get; set; } = new List<FlightSeat>();
     }
 }
