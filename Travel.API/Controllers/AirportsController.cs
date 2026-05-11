@@ -32,7 +32,7 @@ namespace Travel.API.Controllers
             => Ok(ApiResponse<AirportResponseDto>.Ok(await _airportService.GetByIataCodeAsync(code, ct)));
 
         [HttpPost]
-        [Authorize(Roles = "Administrador" /*"Admin"*/)]
+        [Authorize(Roles = "Admin" /*"Admin"*/)]
         public async Task<IActionResult> Create([FromBody] CreateAirportRequest request, CancellationToken ct)
         {
             var result = await _airportService.CreateAsync(request, ct);

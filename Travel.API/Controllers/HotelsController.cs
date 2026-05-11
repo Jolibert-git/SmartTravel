@@ -89,48 +89,49 @@ namespace Travel.API.Controllers
         }
     }
 
-    // ============================================================
-    // VehiclesController
-    // ============================================================
-    [ApiController]
-    [Route("api/v1/[controller]")]
-    [Authorize]
-    public class VehiclesController : ControllerBase
-    {
-        private readonly IVehicleService _vehicleService;
+    //// ============================================================
+    //// VehiclesController
+    //// ============================================================
+    //[ApiController]
+    //[Route("api/v1/[controller]")]
+    //[Authorize]
+    //public class VehiclesController : ControllerBase
+    //{
+    //    private readonly IVehicleService _vehicleService;
 
-        public VehiclesController(IVehicleService vehicleService)
-        {
-            _vehicleService = vehicleService;
-        }
+    //    public VehiclesController(IVehicleService vehicleService)
+    //    {
+    //        _vehicleService = vehicleService;
+    //    }
 
-        [HttpGet("{id:long}")]
-        public async Task<IActionResult> GetById(long id, CancellationToken ct)
-            => Ok(ApiResponse<VehicleResponseDto>.Ok(await _vehicleService.GetByIdAsync(id, ct)));
+    //    [HttpGet("{id:long}")]
+    //    public async Task<IActionResult> GetById(long id, CancellationToken ct)
+    //        => Ok(ApiResponse<VehicleResponseDto>.Ok(await _vehicleService.GetByIdAsync(id, ct)));
 
-        [HttpGet("by-destination/{destinationId:long}")]
-        public async Task<IActionResult> GetByDestination(long destinationId, CancellationToken ct)
-            => Ok(ApiResponse<object>.Ok(await _vehicleService.GetByDestinationAsync(destinationId, ct)));
+    //    [HttpGet("by-destination/{destinationId:long}")]
+    //    public async Task<IActionResult> GetByDestination(long destinationId, CancellationToken ct)
+    //        => Ok(ApiResponse<object>.Ok(await _vehicleService.GetByDestinationAsync(destinationId, ct)));
 
-        [HttpGet("by-transmission")]
-        public async Task<IActionResult> GetByTransmission([FromQuery] string transmission, CancellationToken ct)
-            => Ok(ApiResponse<object>.Ok(await _vehicleService.GetByTransmissionAsync(transmission, ct)));
+    //    [HttpGet("by-transmission")]
+    //    public async Task<IActionResult> GetByTransmission([FromQuery] string transmission, CancellationToken ct)
+    //        => Ok(ApiResponse<object>.Ok(await _vehicleService.GetByTransmissionAsync(transmission, ct)));
 
-        [HttpPost]
-        [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> Create([FromBody] CreateVehicleRequest request, CancellationToken ct)
-        {
-            var result = await _vehicleService.CreateAsync(request, ct);
-            return CreatedAtAction(nameof(GetById), new { id = result.Id },
-                ApiResponse<VehicleResponseDto>.Created(result));
-        }
+    //    [HttpPost]
+    //    [Authorize(Roles = "Admin")]
+    //    public async Task<IActionResult> Create([FromBody] CreateVehicleRequest request, CancellationToken ct)
+    //    {
+    //        var result = await _vehicleService.CreateAsync(request, ct);
+    //        return CreatedAtAction(nameof(GetById), new { id = result.Id },
+    //            ApiResponse<VehicleResponseDto>.Created(result));
+    //    }
 
-        [HttpDelete("{id:long}")]
-        [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> Delete(long id, CancellationToken ct)
-        {
-            await _vehicleService.DeleteAsync(id, ct);
-            return Ok(ApiResponse<object>.NoContent("Vehículo eliminado."));
-        }
+    //    [HttpDelete("{id:long}")]
+    //    [Authorize(Roles = "Admin")]
+    //    public async Task<IActionResult> Delete(long id, CancellationToken ct)
+    //    {
+    //        await _vehicleService.DeleteAsync(id, ct);
+    //        return Ok(ApiResponse<object>.NoContent("Vehículo eliminado."));
+    //    }
+
+
     }
-}

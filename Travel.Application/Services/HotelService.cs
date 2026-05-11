@@ -66,7 +66,10 @@ namespace Travel.Application.Services
         public async Task DeleteAsync(long id, CancellationToken ct = default)
         {
             var entity = await _uow.Hotels.GetByIdAsync(id, ct) ?? throw new NotFoundException("Hotel", id);
+
+            _uow.PhoneHotels.DeleteByHotelAsync(id, ct);
             _uow.Hotels.Delete(entity);
+
             await _uow.SaveChangesAsync(ct);
         }
 

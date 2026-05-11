@@ -20,8 +20,8 @@ namespace Travel.API.Controllers
 
         /// <summary>Inicia sesión y retorna JWT + RefreshToken.</summary>
         [HttpPost("login")]
-        [Authorize]
-        //[AllowAnonymous]
+        //[Authorize]
+        [AllowAnonymous]
         public async Task<IActionResult> Login(
             [FromBody] LoginRequest request,
             CancellationToken cancellationToken)

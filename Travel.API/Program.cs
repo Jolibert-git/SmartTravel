@@ -16,6 +16,7 @@ using Travel.Application.Mapper;
 using Travel.Application.Request;
 using Travel.Application.Services;
 using Travel.Domain.Contracts;
+using Travel.Domain.Entities;
 using Travel.Infrastructure.Repositories;
 using Travel.Persistence.Context;
 
@@ -31,12 +32,12 @@ namespace Travel.API
 
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
-                    builder.Configuration.GetConnectionString("DefaultConnection"),
-                    sql => sql.EnableRetryOnFailure(
-                        maxRetryCount: 3,
-                        maxRetryDelay: TimeSpan.FromSeconds(5),
-                        errorNumbersToAdd: null
-                    )
+                    builder.Configuration.GetConnectionString("DefaultConnection")//,
+                    //sql => sql.EnableRetryOnFailure(
+                    //    maxRetryCount: 3,
+                    //    maxRetryDelay: TimeSpan.FromSeconds(5),
+                    //    errorNumbersToAdd: null
+                    //)
                 )
             );
 
@@ -52,10 +53,13 @@ namespace Travel.API
             builder.Services.AddScoped<IDocumentTypeRepository, DocumentTypeRepository>();
             builder.Services.AddScoped<IAvailabilityStatusRepository, AvailabilityStatusRepository>();
             builder.Services.AddScoped<IReservationStatusRepository, ReservationStatusRepository>();
+            builder.Services.AddScoped<IReservationPassengerRepository, ReservationPassengerRepository>();
             builder.Services.AddScoped<IDiscountTypeRepository, DiscountTypeRepository>();
             builder.Services.AddScoped<ISeatClassRepository, SeatClassRepository>();
             builder.Services.AddScoped<IPaymentStatusRepository, PaymentStatusRepository>();
             builder.Services.AddScoped<IPaymentMethodRepository, PaymentMethodRepository>();
+            builder.Services.AddHttpClient<IPaypalService, PayPalService>();
+
 
             // Users
             builder.Services.AddScoped<ISystemsUserRepository, SystemsUserRepository>();
@@ -103,15 +107,13 @@ namespace Travel.API
 
             // Payments
             builder.Services.AddScoped<IPaymentRepository, PaymentRepository>();
+            builder.Services.AddScoped<IPayPalPaymentRepository, PayPalPaymentRepository>();
 
-            //builder.Services.AddAutoMapper(typeof(Program));
-
-            //builder.Services.AddAutoMapper(typeof(MapperProfile));
-            //builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+            
 
             builder.Services.AddAutoMapper(cfg => { }, AppDomain.CurrentDomain.GetAssemblies());
 
-            //builder.Services.AddAutoMapper(typeof(AnyMappingProfileClass));
+            
 
 
 
@@ -135,6 +137,7 @@ namespace Travel.API
             builder.Services.AddScoped<IPassengerService, PassengerService>();
             builder.Services.AddScoped<IReservationService, ReservationService>();
             builder.Services.AddScoped<IPaymentService, PaymentService>();
+            builder.Services.AddHttpClient<IPaypalService, PayPalService>();
             builder.Services.AddScoped<IPromotionService, PromotionService>();
             builder.Services.AddScoped<IAirportService, AirportService>();
 

@@ -79,6 +79,10 @@ namespace Travel.Application.Services
         {
             var entity = await _uow.Airports.GetByIdAsync(id, ct)
                 ?? throw new NotFoundException("Aeropuerto", id);
+
+            await _uow.PhoneAirports.DeleteByAirportAsync(id, ct);
+
+
             _uow.Airports.Delete(entity);
             await _uow.SaveChangesAsync(ct);
         }

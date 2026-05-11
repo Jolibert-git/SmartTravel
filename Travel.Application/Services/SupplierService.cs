@@ -74,7 +74,24 @@ namespace Travel.Application.Services
         public async Task DeleteAsync(long id, CancellationToken ct = default)
         {
             var entity = await _uow.Suppliers.GetByIdAsync(id, ct) ?? throw new NotFoundException("Proveedor", id);
+
+
+            // Verificar si tiene servicios asociados
+            var hasServices = await _uow.OfferedServices
+                .ExistsAsync(s => s.IdSupplier == id, ct);
+
+            if (hasServices)
+                throw new BusinessRuleException(
+                    "No se puede eliminar el proveedor porque tiene servicios asociados. " +
+                    "Elimine primero los servicios del proveedor.",
+                    "SUPPLIER_HAS_SERVICES");
+
+            // Eliminar teléfonos primero
+            await _uow.PhoneSuppliers.DeleteBySupplierAsync(id, ct);
+
+
             _uow.Suppliers.Delete(entity);
+
             await _uow.SaveChangesAsync(ct);
         }
     }

@@ -27,8 +27,11 @@ namespace Travel.Domain.Entities
         public long? IdPackage { get; set; }
 
         // Navigation
+        [ForeignKey("IdReservationStatus")]
         public ReservationStatus ReservationStatus { get; set; } = null!;
+        [ForeignKey("IdSystemUser")]
         public SystemsUser SystemsUser { get; set; } = null!;
+        [ForeignKey("IdPackage")]
         public Package? Package { get; set; }
         public ICollection<DetailReservation> DetailReservations { get; set; } = new List<DetailReservation>();
         public ICollection<Payment> Payments { get; set; } = new List<Payment>();

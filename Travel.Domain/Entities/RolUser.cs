@@ -19,7 +19,9 @@ namespace Travel.Domain.Entities
         public long IdSystemUser { get; set; }
 
         // Navigation
+        [ForeignKey("IdRol")]
         public Rol Rol { get; set; } = null!;
+        [ForeignKey("IdSystemUser")]
         public SystemsUser SystemsUser { get; set; } = null!;
     }
 

@@ -33,7 +33,9 @@ namespace Travel.Domain.Entities
         public string? Reason { get; set; }
 
         // Navigation
+        [ForeignKey("IdService")]
         public OfferedService OfferedService { get; set; } = null!;
+        [ForeignKey("IdAvailabilityStatus")]
         public AvailabilityStatus AvailabilityStatus { get; set; } = null!;
 
         // => Para el frontend: rango de fechas legible

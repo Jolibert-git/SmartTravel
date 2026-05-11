@@ -31,8 +31,11 @@ namespace Travel.Domain.Entities
         public long IdPaymentMethod { get; set; }
 
         // Navigation
+        [ForeignKey("IdPaymentStatus")]
         public PaymentStatus PaymentStatus { get; set; } = null!;
+        [ForeignKey("IdPaymentMethod")]
         public Reservation Reservation { get; set; } = null!;
+        [ForeignKey("IdReservation")]
         public PaymentMethod PaymentMethod { get; set; } = null!;
 
         // => Para el frontend: monto formateado

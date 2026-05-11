@@ -57,6 +57,8 @@ namespace Travel.Application.Services
             var pendingStatus = await _uow.ReservationStatuses.GetByDescriptionAsync("Pendiente", ct)
                 ?? throw new BusinessRuleException("Estado 'Pendiente' no configurado.", "MISSING_STATUS");
 
+            
+
             await _uow.BeginTransactionAsync(ct);
             try
             {
@@ -73,6 +75,22 @@ namespace Travel.Application.Services
 
                 foreach (var detail in request.Details)
                 {
+
+                    var isUnavailable = await _uow.ServiceAvailabilities
+                        .IsServiceUnavailableAsync(
+                            detail.IdService,
+                            detail.DateCheckIn,
+                            detail.DateCheckOut,
+                            ct);
+
+                    if (isUnavailable)
+                        throw new BusinessRuleException(
+                            "El servicio no tiene disponibilidad por mantenimiento o restricción.",
+                            "SERVICE_NOT_AVAILABLE"
+                        );
+
+
+
                     var resDetail = new DetailReservation
                     {
                         IdReservation = reservation.Id,
@@ -90,8 +108,23 @@ namespace Travel.Application.Services
                     // Asignar asientos
                     foreach (var seat in detail.SeatAssignments)
                     {
+                        var flightSeat = await _uow.FlightSeats.GetByIdAsync(seat.IdFlightSeat, ct)
+                            ?? throw new NotFoundException("Asiento", seat.IdFlightSeat);
+
                         if (await _uow.FlightSeatReservations.SeatAlreadyReservedAsync(seat.IdFlightSeat, ct))
                             throw new BusinessRuleException($"El asiento {seat.IdFlightSeat} ya está reservado.", "SEAT_TAKEN");
+
+                        if (!flightSeat.IsAvailable)
+                            throw new BusinessRuleException(
+                                $"El asiento {flightSeat.SeatNumber} no está disponible.",
+                                "SEAT_NOT_AVAILABLE");
+
+                        // 3. Verificar que no esté ya reservado en otra reserva
+                        if (await _uow.FlightSeatReservations.SeatAlreadyReservedAsync(seat.IdFlightSeat, ct))
+                            throw new BusinessRuleException(
+                                $"El asiento {seat.IdFlightSeat} ya está reservado.",
+                                "SEAT_TAKEN");
+
 
                         await _uow.FlightSeatReservations.AddAsync(new FlightSeatReservation
                         {
@@ -105,8 +138,25 @@ namespace Travel.Application.Services
 
                 // Pasajeros
                 foreach (var passengerId in request.PassengerIds)
-                    await _uow.Passengers.AddAsync(null!, ct); // handled via context
+                {
 
+                    _ = await _uow.Passengers.GetByIdAsync(passengerId, ct)
+                           ?? throw new NotFoundException("Pasajero", passengerId);
+
+                    // Evitar duplicados
+                    if (await _uow.ReservationPassengers.ExistsAsync(reservation.Id, passengerId, ct))
+                        continue;
+
+                    await _uow.ReservationPassengers.AddAsync(new ReservationPassenger
+                    {
+                        IdReservation = reservation.Id,
+                        IdPassenger = passengerId
+                    }, ct);
+                }
+                    //await _uow.Passengers.AddAsync(null!, ct); // handled via context
+
+
+                
                 await _uow.SaveChangesAsync(ct);
                 await _uow.CommitTransactionAsync(ct);
 

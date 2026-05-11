@@ -40,7 +40,9 @@ namespace Travel.Domain.Entities
         public long IdCountry { get; set; }
 
         // Navigation
+        [ForeignKey("IdDocumentType")]
         public DocumentType DocumentType { get; set; } = null!;
+        [ForeignKey("IdCountry")]
         public Country Country { get; set; } = null!;
         public ICollection<ReservationPassenger> ReservationPassengers { get; set; } = new List<ReservationPassenger>();
         public ICollection<FlightSeatReservation> FlightSeatReservations { get; set; } = new List<FlightSeatReservation>();

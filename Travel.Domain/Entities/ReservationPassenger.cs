@@ -18,7 +18,9 @@ namespace Travel.Domain.Entities
         public long IdPassenger { get; set; }
 
         // Navigation
+        [ForeignKey("IdReservation")]
         public Reservation Reservation { get; set; } = null!;
+        [ForeignKey("IdPassenger")]
         public Passenger Passenger { get; set; } = null!;
     }
 }

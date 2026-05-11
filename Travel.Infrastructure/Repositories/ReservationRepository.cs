@@ -73,5 +73,9 @@ namespace Travel.Infrastructure.Repositories
                            .GroupBy(r => r.ReservationStatus.StatusDescription)
                            .Select(g => new { Status = g.Key, Count = g.Count() })
                            .ToDictionaryAsync(x => x.Status, x => x.Count, cancellationToken);
+
+        
+
+
     }
 }

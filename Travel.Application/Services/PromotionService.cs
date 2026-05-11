@@ -83,7 +83,27 @@ namespace Travel.Application.Services
         public async Task DeleteAsync(long id, CancellationToken ct = default)
         {
             var entity = await _uow.Promotions.GetByIdAsync(id, ct) ?? throw new NotFoundException("Promoción", id);
+
+            //var entitydeatil = await _uow.PromotionDetails.GetByIdAsync(id) ?? throw new NotFoundException("PromotionDetail", id);
+
+            var reservationPromotions = await _uow.ReservationPromotions
+                 .GetByPromotion(id)
+                 .ToListAsync(ct);
+
+            _uow.ReservationPromotions.DeleteRange(reservationPromotions);
+
+            // 2. Eliminar detalles de la promoción
+            var details = await _uow.PromotionDetails
+                .GetByPromotion(id)
+                .ToListAsync(ct);
+
+            _uow.PromotionDetails.DeleteRange(details);
+
+            // 3. Eliminar la promoción
             _uow.Promotions.Delete(entity);
+
+            //_uow.PromotionDetails.Delete(entitydeatil);
+            //_uow.Promotions.Delete(entity);
             await _uow.SaveChangesAsync(ct);
         }
     }

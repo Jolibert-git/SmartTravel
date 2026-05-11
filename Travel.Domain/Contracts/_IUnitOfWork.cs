@@ -84,6 +84,7 @@ namespace Travel.Domain.Contracts
         IReservationRepository Reservations { get; }
         IDetailReservationRepository DetailReservations { get; }
         IReservationPromotionRepository ReservationPromotions { get; }
+        IReservationPassengerRepository ReservationPassengers { get; }
         IFlightSeatReservationRepository FlightSeatReservations { get; }
 
         //// ----------------------------------------------------------------

@@ -41,10 +41,15 @@ namespace Travel.Domain.Entities
         public long? IdVehicle { get; set; }
 
         // Navigation
+        [ForeignKey("IdReservation")]
         public Reservation Reservation { get; set; } = null!;
+        [ForeignKey("IdService")]
         public OfferedService OfferedService { get; set; } = null!;
+        [ForeignKey("IdRoom")]
         public Room? Room { get; set; }
+        [ForeignKey("IdFlight")]
         public Flight? Flight { get; set; }
+        [ForeignKey("IdVehicle")]
         public Vehicle? Vehicle { get; set; }
         public ICollection<FlightSeatReservation> FlightSeatReservations { get; set; } = new List<FlightSeatReservation>();
 

@@ -17,6 +17,14 @@ namespace Travel.Domain.Contracts
 
         /// <summary>Retorna el registro de disponibilidad actual de un servicio.</summary>
         Task<ServiceAvailability?> GetCurrentByServiceAsync(long serviceId, CancellationToken cancellationToken = default);
+
+        Task<bool> IsServiceUnavailableAsync
+        (
+            long idService,
+            DateTime dateCheckIn,
+            DateTime dateCheckOut,
+            CancellationToken ct = default
+        );
     }
 
 

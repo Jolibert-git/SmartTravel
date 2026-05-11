@@ -79,6 +79,9 @@ namespace Travel.Persistence.Context
         // Pagos
         public DbSet<Payment> Payments { get; set; }
 
+        public DbSet<PayPalPayment> PayPalPayments { get; set; }
+
+
         // ================================================================
         // Fluent API — configuraciones que Data Annotations no cubre
         // ================================================================
@@ -315,6 +318,7 @@ namespace Travel.Persistence.Context
             modelBuilder.Entity<PaymentMethod>().Ignore(pm => pm.IconName);
             modelBuilder.Entity<Payment>().Ignore(p => p.FormattedAmount);
             modelBuilder.Entity<Payment>().Ignore(p => p.PaymentDateDisplay);
+            modelBuilder.Entity<PayPalPayment>();
             modelBuilder.Entity<Room>().Ignore(r => r.RoomLabel);
         }
     }

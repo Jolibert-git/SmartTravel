@@ -25,7 +25,10 @@ namespace Travel.Domain.Entities
         public decimal DiscountApplied { get; set; }
 
         // Navigation
+        [ForeignKey("IdReservation")]
         public Reservation Reservation { get; set; } = null!;
+
+        [ForeignKey("IdPromotion")]
         public Promotion Promotion { get; set; } = null!;
 
         // => Para el frontend: descuento formateado

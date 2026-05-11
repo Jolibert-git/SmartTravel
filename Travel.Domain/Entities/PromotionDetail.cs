@@ -24,8 +24,11 @@ namespace Travel.Domain.Entities
         public long? IdPackage { get; set; }
 
         // Navigation
+        [ForeignKey("IdPromotion")]
         public Promotion Promotion { get; set; } = null!;
+        [ForeignKey("IdService")]
         public OfferedService? OfferedService { get; set; }
+        [ForeignKey("IdPackage")]
         public Package? Package { get; set; }
 
         // => Para el frontend: aplica a servicio o paquete

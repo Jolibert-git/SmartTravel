@@ -132,6 +132,21 @@ namespace Travel.Application.Services
         {
             var user = await _uow.Users.GetByIdAsync(id, cancellationToken)
                 ?? throw new NotFoundException("Usuario", id);
+
+
+            var hasReservations = await _uow.Reservations
+               .ExistsAsync(r => r.IdSystemUser == id, cancellationToken);
+
+            if (hasReservations)
+                throw new BusinessRuleException(
+                    "No se puede eliminar el usuario porque tiene reservas asociadas.",
+                    "USER_HAS_RESERVATIONS");
+
+
+
+            //_uow.Reservations.DeleteRange(reservations);
+
+
             _uow.Users.Delete(user);
             await _uow.SaveChangesAsync(cancellationToken);
         }

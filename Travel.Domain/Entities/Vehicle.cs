@@ -35,6 +35,7 @@ namespace Travel.Domain.Entities
         public string? Transmission { get; set; }
 
         // Navigation
+        [ForeignKey("IdService")]
         public OfferedService OfferedService { get; set; } = null!;
         [ForeignKey("IdDestination")]
         public Destination Destination { get; set; } = null!;

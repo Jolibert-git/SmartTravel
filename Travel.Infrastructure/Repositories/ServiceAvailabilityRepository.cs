@@ -35,6 +35,24 @@ namespace Travel.Infrastructure.Repositories
                                sa.DateFrom <= DateTime.Now &&
                                sa.DateTo >= DateTime.Now,
                                cancellationToken);
+
+        public async Task<bool> IsServiceUnavailableAsync
+        (
+            long idService,
+            DateTime dateCheckIn,
+            DateTime dateCheckOut,
+            CancellationToken ct = default
+        )
+        {
+            return await _dbSet.AsNoTracking()
+                .AnyAsync(sa =>
+                    sa.IdService == idService &&
+                    (sa.IdAvailabilityStatus == 2 || sa.IdAvailabilityStatus == 3) &&
+                    dateCheckIn < sa.DateTo &&
+                    dateCheckOut > sa.DateFrom,
+                    ct);
+        }
+
     }
 
 }

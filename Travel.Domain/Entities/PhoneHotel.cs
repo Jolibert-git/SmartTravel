@@ -23,6 +23,7 @@ namespace Travel.Domain.Entities
         public long IdHotel { get; set; }
 
         // Navigation
+        [ForeignKey("IdHotel")]
         public Hotel Hotel { get; set; } = null!;
     }
 }

@@ -41,6 +41,7 @@ namespace Travel.Domain.Entities
         public bool IsActive { get; set; } = true;
 
         // Navigation
+        [ForeignKey("IdDiscountType")]
         public DiscountType DiscountType { get; set; } = null!;
         public ICollection<PromotionDetail> PromotionDetails { get; set; } = new List<PromotionDetail>();
         public ICollection<ReservationPromotion> ReservationPromotions { get; set; } = new List<ReservationPromotion>();

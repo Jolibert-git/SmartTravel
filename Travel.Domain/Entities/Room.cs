@@ -24,8 +24,12 @@ namespace Travel.Domain.Entities
         public long IdService { get; set; }
 
         // Navigation
+        //[ForeignKey("IdHotel")]
+        [ForeignKey(nameof(IdHotel))]
         public Hotel Hotel { get; set; } = null!;
+        [ForeignKey("IdTypeRoom")]
         public TypeRoom TypeRoom { get; set; } = null!;
+        [ForeignKey("IdService")]
         public OfferedService OfferedService { get; set; } = null!;
         public ICollection<DetailReservation> DetailReservations { get; set; } = new List<DetailReservation>();
 
