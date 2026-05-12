@@ -1,0 +1,119 @@
+<div class="page">
+
+  <!-- Header -->
+  <div class="page-header">
+    <div class="header-left">
+      <h1>Travel Packages</h1>
+      <p>All-inclusive packages for your perfect vacation</p>
+    </div>
+  </div>
+
+  <!-- Loading -->
+  @if (loading()) {
+    <div class="loading-state">
+      <div class="spinner"></div>
+      <p>Loading packages...</p>
+    </div>
+  }
+
+  <!-- Empty state -->
+  @if (!loading() && packages().length === 0) {
+    <div class="empty-state">
+      <div class="empty-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+        </svg>
+      </div>
+      <h3>No packages available</h3>
+      <p>Check back soon for new travel packages</p>
+    </div>
+  }
+
+  <!-- Packages grid -->
+  @if (!loading() && packages().length > 0) {
+    <div class="packages-grid">
+      @for (pkg of packages(); track pkg.idPackage) {
+        <div class="package-card" [class.card-inactive]="!isActive(pkg.offerEnd)">
+
+          <!-- Card header -->
+          <div class="card-header">
+            <div class="header-icon">
+              <svg viewBox="0 0 24 24" fill="white">
+                <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
+              </svg>
+            </div>
+            <div class="header-info">
+              <h3>{{ pkg.packageName }}</h3>
+              @if (isActive(pkg.offerEnd)) {
+                <span class="badge-active">
+                  {{ daysRemaining(pkg.offerEnd) }} days left
+                </span>
+              } @else {
+                <span class="badge-expired">Offer expired</span>
+              }
+            </div>
+          </div>
+
+          <!-- Card body -->
+          <div class="card-body">
+
+            <!-- Offer dates -->
+            <div class="info-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="18" rx="2"/>
+                <line x1="16" y1="2" x2="16" y2="6"/>
+                <line x1="8"  y1="2" x2="8"  y2="6"/>
+                <line x1="3"  y1="10" x2="21" y2="10"/>
+              </svg>
+              <div class="date-range">
+                <span>{{ pkg.offerStart | date:'MMM dd' }}</span>
+                <span class="date-separator">→</span>
+                <span>{{ pkg.offerEnd | date:'MMM dd, yyyy' }}</span>
+              </div>
+            </div>
+
+            <!-- Services included -->
+            @if (pkg.details && pkg.details.length > 0) {
+              <div class="services-section">
+                <span class="services-title">Includes:</span>
+                <div class="services-list">
+                  @for (detail of pkg.details; track detail.idDetailPackage) {
+                    <div class="service-tag">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"/>
+                      </svg>
+                      {{ detail.serviceDescription }}
+                    </div>
+                  }
+                </div>
+              </div>
+            }
+
+          </div>
+
+          <!-- Card footer -->
+          <div class="card-footer">
+            <div class="price-box">
+              <span class="price-label">Package price</span>
+              <span class="price-value">${{ pkg.price | number:'1.2-2' }}</span>
+            </div>
+            <button
+              class="btn-book"
+              [disabled]="!isActive(pkg.offerEnd)"
+              (click)="selectPackage(pkg)">
+              @if (isActive(pkg.offerEnd)) {
+                Book now
+              } @else {
+                Unavailable
+              }
+            </button>
+          </div>
+
+        </div>
+      }
+    </div>
+  }
+
+</div>
+
+
