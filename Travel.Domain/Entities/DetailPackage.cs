@@ -5,15 +5,14 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Travel.Domain.Core;
 
 namespace Travel.Domain.Entities
 {
     [Table("detail_package")]
-    public class DetailPackage
+    public class DetailPackage : HasId
     {
-        [Key]
-        [Column("id")]
-        public long Id { get; set; }
+        
 
         [Required]
         [Column("number_persons")]
@@ -30,7 +29,9 @@ namespace Travel.Domain.Entities
         public long IdPackage { get; set; }
 
         // Navigation
+        [ForeignKey("IdService")]
         public OfferedService OfferedService { get; set; } = null!;
+        [ForeignKey("IdPackage")]
         public Package Package { get; set; } = null!;
 
         // => Para el frontend: costo por persona calculado

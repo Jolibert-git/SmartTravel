@@ -5,15 +5,14 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Travel.Domain.Core;
 
 namespace Travel.Domain.Entities
 {
     [Table("passenger")]
-    public class Passenger
+    public class Passenger: HasId
     {
-        [Key]
-        [Column("id")]
-        public long Id { get; set; }
+        
 
         [Required]
         [MaxLength(50)]
@@ -41,7 +40,9 @@ namespace Travel.Domain.Entities
         public long IdCountry { get; set; }
 
         // Navigation
+        [ForeignKey("IdDocumentType")]
         public DocumentType DocumentType { get; set; } = null!;
+        [ForeignKey("IdCountry")]
         public Country Country { get; set; } = null!;
         public ICollection<ReservationPassenger> ReservationPassengers { get; set; } = new List<ReservationPassenger>();
         public ICollection<FlightSeatReservation> FlightSeatReservations { get; set; } = new List<FlightSeatReservation>();

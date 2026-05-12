@@ -5,15 +5,14 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Travel.Domain.Core;
 
 namespace Travel.Domain.Entities
 {
     [Table("flight")]
-    public class Flight
+    public class Flight: HasId
     {
-        [Key]
-        [Column("id")]
-        public long Id { get; set; }
+        
 
         [Column("id_service")]
         public long IdService { get; set; }
@@ -37,9 +36,14 @@ namespace Travel.Domain.Entities
         public long AirportIdArrive { get; set; }
 
         // Navigation
+        //[Column("id_offered_service")]
+        [ForeignKey("IdService")]
         public OfferedService OfferedService { get; set; } = null!;
+        [ForeignKey("AirportIdOrigen")]
         public Airport AirportOrigen { get; set; } = null!;
+        [Column("airport_id_arrive")]
         public Airport AirportArrive { get; set; } = null!;
+
         public ICollection<FlightSeat> FlightSeats { get; set; } = new List<FlightSeat>();
         public ICollection<DetailReservation> DetailReservations { get; set; } = new List<DetailReservation>();
 

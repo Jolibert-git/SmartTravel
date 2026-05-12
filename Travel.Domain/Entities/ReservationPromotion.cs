@@ -5,15 +5,14 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Travel.Domain.Core;
 
 namespace Travel.Domain.Entities
 {
     [Table("reservation_promotion")]
-    public class ReservationPromotion
+    public class ReservationPromotion: HasId
     {
-        [Key]
-        [Column("id")]
-        public long Id { get; set; }
+        
 
         [Column("id_reservation")]
         public long IdReservation { get; set; }
@@ -26,7 +25,10 @@ namespace Travel.Domain.Entities
         public decimal DiscountApplied { get; set; }
 
         // Navigation
+        [ForeignKey("IdReservation")]
         public Reservation Reservation { get; set; } = null!;
+
+        [ForeignKey("IdPromotion")]
         public Promotion Promotion { get; set; } = null!;
 
         // => Para el frontend: descuento formateado

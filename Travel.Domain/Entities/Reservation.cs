@@ -5,15 +5,14 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Travel.Domain.Core;
 
 namespace Travel.Domain.Entities
 {
     [Table("reservation")]
-    public class Reservation
+    public class Reservation: HasId
     {
-        [Key]
-        [Column("id")]
-        public long Id { get; set; }
+        
 
         [Column("date_request")]
         public DateTime DateRequest { get; set; } = DateTime.Now;
@@ -28,8 +27,11 @@ namespace Travel.Domain.Entities
         public long? IdPackage { get; set; }
 
         // Navigation
+        [ForeignKey("IdReservationStatus")]
         public ReservationStatus ReservationStatus { get; set; } = null!;
+        [ForeignKey("IdSystemUser")]
         public SystemsUser SystemsUser { get; set; } = null!;
+        [ForeignKey("IdPackage")]
         public Package? Package { get; set; }
         public ICollection<DetailReservation> DetailReservations { get; set; } = new List<DetailReservation>();
         public ICollection<Payment> Payments { get; set; } = new List<Payment>();
