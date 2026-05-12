@@ -1,0 +1,246 @@
+<div class="page">
+
+  <!-- Header -->
+  <div class="page-header">
+    <div class="header-left">
+      <h1>Passengers</h1>
+      <p>Manage your travel companions</p>
+    </div>
+    <button class="btn-primary" (click)="toggleForm()">
+      @if (showForm()) {
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6"  y1="6" x2="18" y2="18"/>
+        </svg>
+        Cancel
+      } @else {
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="12" y1="5" x2="12" y2="19"/>
+          <line x1="5"  y1="12" x2="19" y2="12"/>
+        </svg>
+        Add passenger
+      }
+    </button>
+  </div>
+
+  <!-- Add form -->
+  @if (showForm()) {
+    <div class="form-card">
+      <h3 class="form-title">New passenger</h3>
+      <form [formGroup]="form" (ngSubmit)="save()">
+        <div class="form-grid">
+
+          <!-- First name -->
+          <div class="field-group">
+            <label>First name</label>
+            <div class="input-box" [class.input-error]="form.get('firstName')?.invalid && form.get('firstName')?.touched">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                <circle cx="12" cy="7" r="4"/>
+              </svg>
+              <input type="text" formControlName="firstName" placeholder="John"/>
+            </div>
+            @if (getError('firstName')) {
+              <span class="error-msg">{{ getError('firstName') }}</span>
+            }
+          </div>
+
+          <!-- Last name -->
+          <div class="field-group">
+            <label>Last name</label>
+            <div class="input-box" [class.input-error]="form.get('lastName')?.invalid && form.get('lastName')?.touched">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                <circle cx="12" cy="7" r="4"/>
+              </svg>
+              <input type="text" formControlName="lastName" placeholder="Doe"/>
+            </div>
+            @if (getError('lastName')) {
+              <span class="error-msg">{{ getError('lastName') }}</span>
+            }
+          </div>
+
+          <!-- Birth date -->
+          <div class="field-group">
+            <label>Date of birth</label>
+            <div class="input-box" [class.input-error]="form.get('birthDate')?.invalid && form.get('birthDate')?.touched">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="18" rx="2"/>
+                <line x1="16" y1="2" x2="16" y2="6"/>
+                <line x1="8"  y1="2" x2="8"  y2="6"/>
+                <line x1="3"  y1="10" x2="21" y2="10"/>
+              </svg>
+              <input type="date" formControlName="birthDate"/>
+            </div>
+            @if (getError('birthDate')) {
+              <span class="error-msg">{{ getError('birthDate') }}</span>
+            }
+          </div>
+
+          <!-- Document type -->
+          <div class="field-group">
+            <label>Document type</label>
+            <div class="select-box" [class.select-error]="form.get('idDocumentType')?.invalid && form.get('idDocumentType')?.touched">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="5" width="20" height="14" rx="2"/>
+                <line x1="2" y1="10" x2="22" y2="10"/>
+              </svg>
+              <select formControlName="idDocumentType">
+                <option value="">Select type</option>
+                @for (dt of documentTypes(); track dt.idDocumentType) {
+                  <option [value]="dt.idDocumentType">{{ dt.documentName }}</option>
+                }
+              </select>
+            </div>
+            @if (getError('idDocumentType')) {
+              <span class="error-msg">{{ getError('idDocumentType') }}</span>
+            }
+          </div>
+
+          <!-- Document number -->
+          <div class="field-group">
+            <label>Document number</label>
+            <div class="input-box" [class.input-error]="form.get('documentNumber')?.invalid && form.get('documentNumber')?.touched">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+              </svg>
+              <input type="text" formControlName="documentNumber" placeholder="AB123456"/>
+            </div>
+            @if (getError('documentNumber')) {
+              <span class="error-msg">{{ getError('documentNumber') }}</span>
+            }
+          </div>
+
+          <!-- Nationality -->
+          <div class="field-group">
+            <label>Nationality</label>
+            <div class="select-box" [class.select-error]="form.get('idCountry')?.invalid && form.get('idCountry')?.touched">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="2" y1="12" x2="22" y2="12"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+              <select formControlName="idCountry">
+                <option value="">Select country</option>
+                @for (country of countries(); track country.idCountry) {
+                  <option [value]="country.idCountry">
+                    {{ country.isoCode }} — {{ country.countryName }}
+                  </option>
+                }
+              </select>
+            </div>
+            @if (getError('idCountry')) {
+              <span class="error-msg">{{ getError('idCountry') }}</span>
+            }
+          </div>
+
+        </div>
+
+        <!-- Form actions -->
+        <div class="form-actions">
+          <button type="button" class="btn-secondary" (click)="toggleForm()">
+            Cancel
+          </button>
+          <button type="submit" class="btn-primary" [disabled]="saving()">
+            @if (saving()) {
+              <span class="spinner"></span>
+              Saving...
+            } @else {
+              Save passenger
+            }
+          </button>
+        </div>
+      </form>
+    </div>
+  }
+
+  <!-- Loading -->
+  @if (loading()) {
+    <div class="loading-state">
+      <div class="spinner-lg"></div>
+      <p>Loading passengers...</p>
+    </div>
+  }
+
+  <!-- Empty state -->
+  @if (!loading() && passengers().length === 0 && !showForm()) {
+    <div class="empty-state">
+      <div class="empty-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+          <circle cx="9" cy="7" r="4"/>
+          <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+          <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+        </svg>
+      </div>
+      <h3>No passengers yet</h3>
+      <p>Add your travel companions to book flights and hotels</p>
+      <button class="btn-primary" (click)="toggleForm()">
+        Add first passenger
+      </button>
+    </div>
+  }
+
+  <!-- Passengers list -->
+  @if (!loading() && passengers().length > 0) {
+    <div class="passengers-grid">
+      @for (passenger of passengers(); track passenger.idPassenger) {
+        <div class="passenger-card">
+
+          <!-- Avatar -->
+          <div class="passenger-avatar">
+            {{ passenger.firstName[0] }}{{ passenger.lastName[0] }}
+          </div>
+
+          <!-- Info -->
+          <div class="passenger-info">
+            <h3 class="passenger-name">
+              {{ passenger.firstName }} {{ passenger.lastName }}
+            </h3>
+
+            <div class="info-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="5" width="20" height="14" rx="2"/>
+                <line x1="2" y1="10" x2="22" y2="10"/>
+              </svg>
+              <span>{{ passenger.documentName }} — {{ passenger.documentNumber }}</span>
+            </div>
+
+            <div class="info-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="18" rx="2"/>
+                <line x1="16" y1="2" x2="16" y2="6"/>
+                <line x1="8"  y1="2" x2="8"  y2="6"/>
+                <line x1="3"  y1="10" x2="21" y2="10"/>
+              </svg>
+              <span>{{ passenger.birthDate | date:'MMM dd, yyyy' }}</span>
+            </div>
+
+            <div class="info-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="2" y1="12" x2="22" y2="12"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+              <span>{{ passenger.countryName }}</span>
+            </div>
+          </div>
+
+          <!-- Delete -->
+          <button class="btn-delete" (click)="delete(passenger.idPassenger)" title="Remove passenger">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="3 6 5 6 21 6"/>
+              <path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/>
+              <path d="M10 11v6"/>
+              <path d="M14 11v6"/>
+              <path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/>
+            </svg>
+          </button>
+
+        </div>
+      }
+    </div>
+  }
+
+</div>

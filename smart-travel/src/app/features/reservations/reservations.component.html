@@ -1,0 +1,121 @@
+<div class="page">
+
+  <!-- Header -->
+  <div class="page-header">
+    <div class="header-left">
+      <h1>My Reservations</h1>
+      <p>Manage all your travel reservations</p>
+    </div>
+    <button class="btn-primary" routerLink="/app/flights">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="12" y1="5" x2="12" y2="19"/>
+        <line x1="5" y1="12" x2="19" y2="12"/>
+      </svg>
+      New reservation
+    </button>
+  </div>
+
+  <!-- Loading -->
+  @if (loading()) {
+    <div class="loading-state">
+      <div class="spinner"></div>
+      <p>Loading reservations...</p>
+    </div>
+  }
+
+  <!-- Empty state -->
+  @if (!loading() && reservations().length === 0) {
+    <div class="empty-state">
+      <div class="empty-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="3" y="4" width="18" height="18" rx="2"/>
+          <line x1="16" y1="2" x2="16" y2="6"/>
+          <line x1="8"  y1="2" x2="8"  y2="6"/>
+          <line x1="3"  y1="10" x2="21" y2="10"/>
+        </svg>
+      </div>
+      <h3>No reservations yet</h3>
+      <p>Start by searching for flights, hotels or packages</p>
+      <button class="btn-primary" routerLink="/app/flights">
+        Explore options
+      </button>
+    </div>
+  }
+
+  <!-- Reservations list -->
+  @if (!loading() && reservations().length > 0) {
+    <div class="reservations-grid">
+      @for (res of reservations(); track res.idReservation) {
+        <div class="reservation-card">
+
+          <!-- Card header -->
+          <div class="card-header">
+            <div class="card-id">
+              <span class="id-label">Reservation</span>
+              <span class="id-value">#{{ res.idReservation }}</span>
+            </div>
+            <span class="badge" [class]="getStatusClass(res.statusDescription)">
+              {{ res.statusDescription || 'Pending' }}
+            </span>
+          </div>
+
+          <!-- Card body -->
+          <div class="card-body">
+
+            @if (res.packageName) {
+              <div class="info-row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                </svg>
+                <span>{{ res.packageName }}</span>
+              </div>
+            }
+
+            <div class="info-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="18" rx="2"/>
+                <line x1="16" y1="2" x2="16" y2="6"/>
+                <line x1="8"  y1="2" x2="8"  y2="6"/>
+                <line x1="3"  y1="10" x2="21" y2="10"/>
+              </svg>
+              <span>{{ res.dateRequest | date:'MMM dd, yyyy' }}</span>
+            </div>
+
+            @if (res.details && res.details.length > 0) {
+              <div class="services-list">
+                @for (detail of res.details; track detail.idDetailReservation) {
+                  <div class="service-tag">
+                    {{ detail.serviceDescription }}
+                  </div>
+                }
+              </div>
+            }
+
+          </div>
+
+          <!-- Card footer -->
+          <div class="card-footer">
+            <div class="total">
+              @if (res.details && res.details.length > 0) {
+                <span class="total-label">Total</span>
+                <span class="total-value">
+                  ${{ res.details[0].total | number:'1.2-2' }}
+                </span>
+              }
+            </div>
+            @if (res.statusDescription?.toLowerCase() !== 'cancelled' &&
+                 res.statusDescription?.toLowerCase() !== 'completed') {
+              <button
+                class="btn-cancel"
+                (click)="cancel(res.idReservation)">
+                Cancel
+              </button>
+            }
+          </div>
+
+        </div>
+      }
+    </div>
+  }
+
+</div>

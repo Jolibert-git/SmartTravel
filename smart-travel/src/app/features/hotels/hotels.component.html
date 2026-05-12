@@ -1,0 +1,126 @@
+<div class="page">
+
+  <!-- Header -->
+  <div class="page-header">
+    <div class="header-left">
+      <h1>Hotels</h1>
+      <p>Browse and book the best hotels for your stay</p>
+    </div>
+
+    <!-- Destination filter -->
+    <form [formGroup]="filterForm" class="filter-form">
+      <div class="select-box">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+          <circle cx="12" cy="10" r="3"/>
+        </svg>
+        <select formControlName="destinationId">
+          <option value="">All destinations</option>
+          @for (dest of destinations(); track dest.idDestination) {
+            <option [value]="dest.idDestination">
+              {{ dest.city }}, {{ dest.countryName }}
+            </option>
+          }
+        </select>
+      </div>
+    </form>
+  </div>
+
+  <!-- Loading -->
+  @if (loading()) {
+    <div class="loading-state">
+      <div class="spinner"></div>
+      <p>Loading hotels...</p>
+    </div>
+  }
+
+  <!-- Empty state -->
+  @if (!loading() && hotels().length === 0) {
+    <div class="empty-state">
+      <div class="empty-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+          <polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>
+      </div>
+      <h3>No hotels found</h3>
+      <p>Try selecting a different destination</p>
+    </div>
+  }
+
+  <!-- Hotels grid -->
+  @if (!loading() && hotels().length > 0) {
+    <div class="hotels-grid">
+      @for (hotel of hotels(); track hotel.idHotel) {
+        <div class="hotel-card">
+
+          <!-- Image placeholder -->
+          <div class="hotel-image">
+            <div class="image-placeholder">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                <polyline points="9 22 9 12 15 12 15 22"/>
+              </svg>
+            </div>
+            <!-- Stars overlay -->
+            <div class="stars-overlay">
+              @for (star of getStars(hotel.stars); track star) {
+                <svg
+                  class="star"
+                  [class.star-filled]="star <= hotel.stars"
+                  viewBox="0 0 24 24">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+              }
+            </div>
+          </div>
+
+          <!-- Card body -->
+          <div class="hotel-body">
+            <h3 class="hotel-name">{{ hotel.hotelName }}</h3>
+
+            <div class="hotel-location">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              <span>{{ hotel.city }}, {{ hotel.country }}</span>
+            </div>
+
+            @if (hotel.email) {
+              <div class="hotel-email">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+                <span>{{ hotel.email }}</span>
+              </div>
+            }
+
+            @if (hotel.rooms && hotel.rooms.length > 0) {
+              <div class="rooms-info">
+                <span class="rooms-count">{{ hotel.rooms.length }} room type(s) available</span>
+              </div>
+            }
+          </div>
+
+          <!-- Card footer -->
+          <div class="hotel-footer">
+            @if (hotel.rooms && hotel.rooms.length > 0) {
+              <div class="price-from">
+                <span class="from-label">From</span>
+                <span class="from-price">${{ hotel.rooms[0].price | number:'1.2-2' }}</span>
+                <span class="per-night">/ night</span>
+              </div>
+            }
+            <button class="btn-select" (click)="selectHotel(hotel)">
+              View rooms
+            </button>
+          </div>
+
+        </div>
+      }
+    </div>
+  }
+
+</div>
