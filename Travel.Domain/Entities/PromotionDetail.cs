@@ -5,15 +5,14 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Travel.Domain.Core;
 
 namespace Travel.Domain.Entities
 {
     [Table("promotion_detail")]
-    public class PromotionDetail
+    public class PromotionDetail: HasId
     {
-        [Key]
-        [Column("id")]
-        public long Id { get; set; }
+        
 
         [Column("id_promotion")]
         public long IdPromotion { get; set; }
@@ -25,8 +24,11 @@ namespace Travel.Domain.Entities
         public long? IdPackage { get; set; }
 
         // Navigation
+        [ForeignKey("IdPromotion")]
         public Promotion Promotion { get; set; } = null!;
+        [ForeignKey("IdService")]
         public OfferedService? OfferedService { get; set; }
+        [ForeignKey("IdPackage")]
         public Package? Package { get; set; }
 
         // => Para el frontend: aplica a servicio o paquete

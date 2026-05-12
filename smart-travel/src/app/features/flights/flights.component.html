@@ -1,0 +1,185 @@
+<div class="page">
+
+  <!-- Header -->
+  <div class="page-header">
+    <div class="header-left">
+      <h1>Search Flights</h1>
+      <p>Find the best flights for your trip</p>
+    </div>
+  </div>
+
+  <!-- Search form -->
+  <div class="search-card">
+    <form [formGroup]="searchForm" (ngSubmit)="search()">
+      <div class="search-grid">
+
+        <!-- Origin -->
+        <div class="field-group">
+          <label>From</label>
+          <div class="select-box" [class.select-error]="searchForm.get('originAirportId')?.invalid && searchForm.get('originAirportId')?.touched">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
+            </svg>
+            <select formControlName="originAirportId">
+              <option value="">Select origin</option>
+              @for (airport of airports(); track airport.idAirport) {
+                <option [value]="airport.idAirport">
+                  {{ airport.codeIATA }} — {{ airport.airportName }}
+                </option>
+              }
+            </select>
+          </div>
+        </div>
+
+        <!-- Destination -->
+        <div class="field-group">
+          <label>To</label>
+          <div class="select-box" [class.select-error]="searchForm.get('arrivalAirportId')?.invalid && searchForm.get('arrivalAirportId')?.touched">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+            <select formControlName="arrivalAirportId">
+              <option value="">Select destination</option>
+              @for (airport of airports(); track airport.idAirport) {
+                <option [value]="airport.idAirport">
+                  {{ airport.codeIATA }} — {{ airport.airportName }}
+                </option>
+              }
+            </select>
+          </div>
+        </div>
+
+        <!-- Date -->
+        <div class="field-group">
+          <label>Departure date</label>
+          <div class="input-box" [class.input-error]="searchForm.get('dateDeparture')?.invalid && searchForm.get('dateDeparture')?.touched">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="4" width="18" height="18" rx="2"/>
+              <line x1="16" y1="2" x2="16" y2="6"/>
+              <line x1="8"  y1="2" x2="8"  y2="6"/>
+              <line x1="3"  y1="10" x2="21" y2="10"/>
+            </svg>
+            <input type="date" formControlName="dateDeparture"/>
+          </div>
+        </div>
+
+        <!-- Passengers -->
+        <div class="field-group">
+          <label>Passengers</label>
+          <div class="input-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+            <input type="number" formControlName="passengers" min="1" max="20"/>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Search button -->
+      <button type="submit" class="btn-search" [disabled]="loading()">
+        @if (loading()) {
+          <span class="spinner"></span>
+          Searching...
+        } @else {
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+          Search flights
+        }
+      </button>
+    </form>
+  </div>
+
+  <!-- Results -->
+  @if (searched()) {
+
+    @if (loading()) {
+      <div class="loading-state">
+        <div class="spinner-lg"></div>
+        <p>Searching available flights...</p>
+      </div>
+    }
+
+    @if (!loading() && flights().length === 0) {
+      <div class="empty-state">
+        <div class="empty-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
+          </svg>
+        </div>
+        <h3>No flights found</h3>
+        <p>Try different dates or airports</p>
+      </div>
+    }
+
+    @if (!loading() && flights().length > 0) {
+      <div class="results-header">
+        <h2>{{ flights().length }} flight(s) found</h2>
+      </div>
+
+      <div class="flights-list">
+        @for (flight of flights(); track flight.idFlight) {
+          <div class="flight-card">
+
+            <!-- Route -->
+            <div class="flight-route">
+              <div class="airport">
+                <span class="iata">{{ flight.originCode }}</span>
+                <span class="airport-name">{{ flight.originAirportName }}</span>
+                <span class="time">{{ flight.dateDeparture | date:'HH:mm' }}</span>
+              </div>
+
+              <div class="route-line">
+                <div class="line"></div>
+                <div class="plane-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
+                  </svg>
+                </div>
+                <div class="duration">{{ getDuration(flight.dateDeparture, flight.dateArrival) }}</div>
+                <div class="line"></div>
+              </div>
+
+              <div class="airport airport-right">
+                <span class="iata">{{ flight.arrivalCode }}</span>
+                <span class="airport-name">{{ flight.arrivalAirportName }}</span>
+                <span class="time">{{ flight.dateArrival | date:'HH:mm' }}</span>
+              </div>
+            </div>
+
+            <!-- Details -->
+            <div class="flight-details">
+              <div class="detail-item">
+                <span class="detail-label">Date</span>
+                <span class="detail-value">{{ flight.dateDeparture | date:'MMM dd, yyyy' }}</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Available seats</span>
+                <span class="detail-value">{{ flight.capacity }}</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Price</span>
+                <span class="detail-value price">${{ flight.price | number:'1.2-2' }}</span>
+              </div>
+            </div>
+
+            <!-- Action -->
+            <div class="flight-action">
+              <button class="btn-select" (click)="selectFlight(flight)">
+                Select flight
+              </button>
+            </div>
+
+          </div>
+        }
+      </div>
+    }
+  }
+
+</div>

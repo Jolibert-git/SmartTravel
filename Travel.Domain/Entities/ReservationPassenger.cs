@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Travel.Domain.Core;
 
 namespace Travel.Domain.Entities
 {
@@ -17,7 +18,9 @@ namespace Travel.Domain.Entities
         public long IdPassenger { get; set; }
 
         // Navigation
+        [ForeignKey("IdReservation")]
         public Reservation Reservation { get; set; } = null!;
+        [ForeignKey("IdPassenger")]
         public Passenger Passenger { get; set; } = null!;
     }
 }
