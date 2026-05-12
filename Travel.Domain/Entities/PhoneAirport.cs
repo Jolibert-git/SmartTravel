@@ -5,15 +5,14 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Travel.Domain.Core;
 
 namespace Travel.Domain.Entities
 {
     [Table("phone_airport")]
-    public class PhoneAirport
+    public class PhoneAirport: HasId
     {
-        [Key]
-        [Column("id")]
-        public long Id { get; set; }
+        
 
         [Required]
         [MaxLength(15)]
@@ -24,6 +23,7 @@ namespace Travel.Domain.Entities
         public long IdAirport { get; set; }
 
         // Navigation
+        [ForeignKey("IdAirport")]
         public Airport Airport { get; set; } = null!;
     }
 }

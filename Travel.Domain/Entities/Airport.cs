@@ -5,18 +5,19 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Travel.Domain.Core;
 
 namespace Travel.Domain.Entities
 {
     [Table("airport")]
-    public class Airport
+    public class Airport : HasId
     {
-        [Key]
-        [Column("id")]
-        public long Id { get; set; }
+        
 
         [Column("id_destination")]
         public long IdDestination { get; set; }
+
+        
 
         [Required]
         [MaxLength(45)]
@@ -29,6 +30,7 @@ namespace Travel.Domain.Entities
         public string CodeIata { get; set; } = string.Empty;
 
         // Navigation
+        [ForeignKey("IdDestination")]
         public Destination Destination { get; set; } = null!;
         public ICollection<PhoneAirport> PhoneAirports { get; set; } = new List<PhoneAirport>();
         public ICollection<Flight> DepartureFlights { get; set; } = new List<Flight>();

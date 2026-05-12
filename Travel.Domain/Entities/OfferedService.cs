@@ -5,15 +5,14 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Travel.Domain.Core;
 
 namespace Travel.Domain.Entities
 {
     [Table("offered_service")]
-    public class OfferedService
+    public class OfferedService: HasId
     {
-        [Key]
-        [Column("id")]
-        public long Id { get; set; }
+        
 
         [Required]
         [MaxLength(45)]
@@ -31,7 +30,9 @@ namespace Travel.Domain.Entities
         public long IdSupplier { get; set; }
 
         // Navigation
+        [ForeignKey("IdTypeService")]
         public TypeService TypeService { get; set; } = null!;
+        [ForeignKey("IdSupplier")]
         public Supplier Supplier { get; set; } = null!;
         public ICollection<ServiceAvailability> ServiceAvailabilities { get; set; } = new List<ServiceAvailability>();
         public ICollection<DetailPackage> DetailPackages { get; set; } = new List<DetailPackage>();
